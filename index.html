@@ -13,11 +13,12 @@
     <div id="vue-app">
         <h1>Eventos</h1>
         <p>My age is: {{age}}</p>
-        <button @click="handleOperation(1)">Add a Year</button>
+        <button @click.once="handleOperation(1)">Add a Year</button>
         <button v-on:click="handleOperation(-1)">Subtract a Year</button>
         <div id="canvas" v-on:mousemove="updateXY">
             {{x}} , {{y}}
         </div>
+        <a @click.prevent="click" href="https://google.com"> Google </a>
     </div>
 
     <script src="./app.js"></script>
