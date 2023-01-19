@@ -1,15 +1,26 @@
 new Vue({
     el: '#vue-app',
     data: {
-       name: "",
-       age: ""
+       a: 0,
+       b: 0,
+       age:20
     },
     methods: {
-        logName: function(){
-            console.log('you entered your name')
+       /*  addToA: function(){
+            return this.age + this.a;
         },
-        logAge: function(){
-            console.log('you entered your age')
-        },
+        addToB: function(){
+            return this.age + this.b;
+        } */
     },
+    computed: {
+        addToA: function(){
+            return this.age + this.a;
+        },
+        addToB: function(){
+            return this.age + this.b;
+        }
+    }
 })
+
+//computed only run when they are needed
