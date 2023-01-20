@@ -11,13 +11,17 @@
 <body>
 
     <div id="vue-app">
-        <h1>Computed Properties</h1>
-        <button v-on:click="a++">Add to A</button>
-        <button v-on:click="b++">Add to B</button>
-        <p>A - {{ a }}</p>
-        <p>B - {{ b }}</p>
-        <p>Age + A = {{ addToA }}</p>
-        <p>Age + B = {{ addToB }}</p>
+        <h1>Dynamic CSS classes</h1>
+        <h1>Example 1</h1>
+        <div v-bind:class="{available: available}" @click="toggleAvailable">
+            <span>Hector</span>
+        </div>
+        <h1>Example 2</h1>
+        <button @click="toggleNearby">toggle nearby</button>
+        <button @click="toggleAvailable">toggle available</button>
+        <div v-bind:class="compClasses">
+            <span>Hector</span>
+        </div>
     </div>
 
     <script src="./app.js"></script>

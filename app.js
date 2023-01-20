@@ -1,25 +1,25 @@
 new Vue({
     el: '#vue-app',
     data: {
-       a: 0,
-       b: 0,
-       age:20
+       available: false,
+       nearby: false
     },
     methods: {
-       /*  addToA: function(){
-            return this.age + this.a;
+        toggleNearby: function(){
+            return this.nearby = !this.nearby;
         },
-        addToB: function(){
-            return this.age + this.b;
-        } */
+        
+        toggleAvailable: function(){
+            return this.available = !this.available;
+        }
     },
     computed: {
-        addToA: function(){
-            return this.age + this.a;
+        compClasses: function(){
+            return {
+                available: this.available,
+                nearby: this.nearby
+            }
         },
-        addToB: function(){
-            return this.age + this.b;
-        }
     }
 })
 
